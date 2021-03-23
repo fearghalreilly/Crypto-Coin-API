@@ -46,9 +46,18 @@ function App() {
         </form>
       </div>
       <div>
-        <button onClick={() => setWhichComponentToShow('CoinAll')}>All Coins</button>
-        <button onClick={() => setWhichComponentToShow('CoinUp')}>Increased</button>
-        <button onClick={() => setWhichComponentToShow('CoinDown')}>Descreased</button>
+       
+        {whichComponentToShow === 'CoinAll' ? 
+        ( <button className='coin-percent red' onClick={() => setWhichComponentToShow('CoinAll')}>All Coins</button> ) : (<button className='coin-percent green' onClick={() => setWhichComponentToShow('CoinAll')}>All Coins</button>)}
+
+        {whichComponentToShow === 'CoinUp' ? 
+        ( <button className='coin-percent red' onClick={() => setWhichComponentToShow('CoinAll')}>Increased </button> ) : (<button className='coin-percent green' onClick={() => setWhichComponentToShow('CoinUp')}>Increased </button>)}
+
+        {whichComponentToShow === 'CoinDown' ? 
+        ( <button className='coin-percent red' onClick={() => setWhichComponentToShow('CoinDown')}>Descreased </button> ) : (<button className='coin-percent green' onClick={() => setWhichComponentToShow('CoinDown')}>Descreased </button>)}
+        
+     
+      
       </div>
       <div>
      
